@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/05/2017, 12:05:02 PM
+    Author     : Bonaliza
+*/
+
+body {
+	background-image: url("../Images/registerBackground.jpg");
+	background-size: 110% 100%;
+	font-family: 'Exo', sans-serif;
+	text-align: center;
+}
+
+input {
+	background: transparent;
+	font-family: 'Exo', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-size: 16px;
+	width: 25%;
+	height: 45px;
+	border-radius: 4px;
+}
+
+input[name="login"]:hover{
+	color: gold;
+}
+
+input[name="signup_btn"]:hover{
+	color: gold;
+}
+
+
+#login_wrapper
+{
+	color: grey;
+    background-size: cover;
+    margin: 0 auto;
+
+}
+
