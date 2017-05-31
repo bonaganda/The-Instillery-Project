@@ -8,10 +8,11 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <?php include 'Navbar.php';?>
 <body class="w3-black">
 <br/>
 <div class="w3-content w3-margin-top" style="max-width:450px;">
-	 <img src="Images/logo.png" style="width:100%">
+<!--	 <img src="Images/logo.png" style="width:100%">--><br/><br/><br/><br/><br/><br/><br/>
 </div>
 <br/>
 <!-- Page Container -->

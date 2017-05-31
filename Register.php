@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/registerStyle.css"/>
     </head>
     <body>
+        <?php include './Navbar.php';?>
         <header> 
             <a href='index.php'><img src ="Images/InstilleryLogo.png" alt="logo" style="height: 19%; width: 24%"/></a>
         </header>
@@ -38,7 +39,7 @@
                         <input type="radio" name="gender" value="male" style="width:3%; height: 15px; left: 10%">Male 
                         <input type="radio" name="gender" value="female" style="width:3%; height: 15px">Female
                     <p/>
-                    <input id="button" type="submit" name="signup_btn" value="Register" style="font-size: 18px; background-color: lightblue; font-weight: bold; ">
+                    <input id="button" type="submit" name="signup_btn" value="Register" style="font-size: 18px; background-color: lightblue; font-weight: bold; width: 22%">
 
                     <p style="font-size: 22px">
                         <img src ="Images/SignUpIcon.png" alt="sUIcon" style="height: 20px; position: relative;">
@@ -46,7 +47,7 @@
                     </p>
                     <p>
                         <input type="button" name ="login" value="Login" class="loginbutton" id="btnLgn" 
-                        style="font-size: 18px; background-color:lightgreen ;font-weight: bold; "  onClick="document.location.href='Login.html'" />
+                        style="font-size: 18px; background-color:lightgreen ;font-weight: bold; width: 22%"  onClick="document.location.href='Login.html'" />
                     </p>
                 </form> 	
             </div>

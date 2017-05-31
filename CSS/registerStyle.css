@@ -7,10 +7,13 @@ and open the template in the editor.
     Created on : 30/05/2017, 12:05:02 PM
     Author     : Bonaliza
 */
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
 
 body {
 	background-image: url("../Images/registerBackground.jpg");
-	background-size: 110% 100%;
+	background-size: 100% 100%;
 	font-family: 'Exo', sans-serif;
 	text-align: center;
 }
@@ -23,7 +26,6 @@ input {
 	font-size: 16px;
 	width: 25%;
 	height: 45px;
-	border-radius: 4px;
 }
 
 input[name="login"]:hover{
@@ -37,7 +39,7 @@ input[name="signup_btn"]:hover{
 
 #login_wrapper
 {
-	color: grey;
+    color: black;
     background-size: cover;
     margin: 0 auto;
 

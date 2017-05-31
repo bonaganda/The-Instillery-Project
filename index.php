@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html>
-<title>User Profile</title>
+<title>The Instillery</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,7 +17,7 @@ and open the template in the editor.
     <body style="background: url(Images/websitebackground.jpg)">
         <?php include 'Navbar.php';?><br>
         <?php include './HomeGames.php';?><br>
-    
+        
         <!-- Page Container -->
         <div class="w3-content w3-margin-top" style="max-width:800px;">
         <!-- End Page Container -->
