@@ -8,7 +8,7 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <?php include 'Navbar.php';?>
+    <?php include 'Navigationbar.php';?>
 <body class="w3-black">
 <br/>
 <div class="w3-content w3-margin-top" style="max-width:450px;">
