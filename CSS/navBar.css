@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/08/2017, 11:59:33 AM
+    Author     : Benjo
+*/
+
+#logo { 
+    float:left; top:0; left:0; 
+}
+
+#nav
+{
+    list-style: none;
+}
+
+#nav ul
+{
+    list-style-type: none;
+    margin-top: 0;
+    max-width: 80%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+#nav li:last-child
+{
+    float: right;
+    margin-right: 50px;
+    text-align: center;
+    
+}
+
+#nav li
+{
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav a:hover
+{
+    color: #b57c28;
+}
+
+.navigation
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    background-color: black;
+    box-shadow: 3px 3px 3px #1E1B1B;
+    margin: 0 auto;
+}
+
+.active {
+    background-color: #b57c28;
+}
+
+.dropbtn {
+    display: inline-block;
+    background-color: transparent;
+    padding: 14px 16px;
+    border: none;
+    color: white;
+    text-align: center;
+    float: bottom;
+    position: relative;
+    font-size: 20px;
+}
+
+.dropdown {
+    display: inline-block;   
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: black;
+    min-width: 122px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   
+}
+
+.dropdown-content-sub{
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    visibility: hidden;
+    background-color: black;
+    min-width: 122px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #fff; opacity: 0.7}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover .dropdown-content-sub{
+    visibility: visible;
+    display: block;
+}
+

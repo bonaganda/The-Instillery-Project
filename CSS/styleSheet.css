@@ -29,6 +29,35 @@ body p
     margin: 0 auto;
 }
 
+.button {
+    background-color: #b57c28; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+    
+
+.button1 {
+    border-radius: 4px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #b57c28;
+    
+ 
+
+.button1:hover {
+    background-color: #b57c28;
+    color: white;
+}
+
+
+
 #wrapper_top10
 {
     width: 1080px;
@@ -588,4 +617,3 @@ div.center {text-align: center;}
 html,body,h1,h2,h3,h4,h5,h6 {
     font-family: "Roboto", sans-serif
 }
-
