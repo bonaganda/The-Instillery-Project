@@ -15,7 +15,7 @@ and open the template in the editor.
 <link rel="stylesheet" type="text/css" href="CSS/styleSheet.css"/>
     
     <body style="background: url(Images/websitebackground.jpg)">
-        <?php include 'Navbar.php';?><br>
+        <?php include 'Navigationbar.php';?><br>
         <?php include './HomeGames.php';?><br>
         
         <!-- Page Container -->

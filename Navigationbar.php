@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="CSS/styleSheet.css"/><nav class="navigation">
+<link rel="stylesheet" type="text/css" href="CSS/navBar.css"/><nav class="navigation">
     <ul id="nav">
         <a href="index.php"><img src="Images/inst.png" width="232" height="120" id="logo" /></a> 
         <li><a href="">TOURNAMENTS</a></li>
@@ -12,8 +12,8 @@
             </div>
         </li> 
         <li><a href="UserProfile.php">PROFILES</a></li>
-        <li><a href="">RULES</a></li>
-        <li><a href="Register.html">REGISTER</a></li>
+        <li><a href="leaderboard.php">LEADERBOARD</a></li>
+        <li><a href="RegisterForm.php">REGISTER</a></li>
         <?php if (isset($_SESSION['username'])) { ?>
             <li class="dropdown" style="position: relative; top:">
                 <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()"><?php echo $_SESSION['username']; ?></a>
