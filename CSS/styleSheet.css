@@ -3,7 +3,7 @@
 
 body 
 {
-    font-family: lucida grande, tahoma, verdana, arial, sans-serif;
+    font-family: 'Exo', sans-serif !important;
     color: white;
     background-image: url(../Images/Background/GBBackground.jpg);
     background-size: cover;
@@ -38,6 +38,10 @@ body p
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+<<<<<<< HEAD
+=======
+    font-family: 'Exo', sans-serif !important;
+>>>>>>> master
     margin: 4px 2px;
     cursor: pointer;
 }
