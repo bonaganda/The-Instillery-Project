@@ -13,7 +13,7 @@
         </li> 
         <li><a href="UserProfile.php">PROFILES</a></li>
         <li><a href="leaderboard.php">LEADERBOARD</a></li>
-        <li><a href="Register.html">REGISTER</a></li>
+        <li><a href="RegisterForm.php">REGISTER</a></li>
         <?php if (isset($_SESSION['username'])) { ?>
             <li class="dropdown" style="position: relative; top:">
                 <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()"><?php echo $_SESSION['username']; ?></a>
