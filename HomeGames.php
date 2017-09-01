@@ -22,10 +22,10 @@
     </div>
 </div>
 <centre>
-<a href="Add-Nba.php"><input type="button" class="button button1" value="Add Nba Game " style ="position: relative; left: 32% "  /></a>
-<a href="Add-Fifa.php"><input type="button" class="button button1" value="Add Fifa Game" style ="position: relative; left: 32% " /></a>
-<a href="Add-Pool.php"><input type="button" class="button button1" value="Add Pool Game" style ="position: relative; left: 32% " /></a><br>
-<a href="Standings.php"><input type="button" class="button button1" value="View Standings" style ="position: relative; left: 44.3%" /></a>
+<a href="Add-Nba.php"><input type="button" class="button button1" value="Add Nba Game " style ="position: relative; left: 35% "  /></a>
+<a href="Add-Fifa.php"><input type="button" class="button button1" value="Add Fifa Game" style ="position: relative; left: 35% " /></a>
+<a href="Add-Pool.php"><input type="button" class="button button1" value="Add Pool Game" style ="position: relative; left: 35% " /></a><br>
+<a href="Standings.php"><input type="button" class="button button1" value="View Standings" style ="position: relative; left: 44.8%" /></a>
 </centre>
 <script>
     var slideIndex = 1;

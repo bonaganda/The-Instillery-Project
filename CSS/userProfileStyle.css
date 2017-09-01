@@ -6,6 +6,10 @@
 	background: #dd9933;
 	color: black;
 }
+
+.w3-jf{
+    background-image: url("Images/john.jpeg"); 
+}
 .icon-jd{
 	color:#dd9933;
 }
@@ -16,9 +20,26 @@
 	margin:20px 0;
 }
 
-html,body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Roboto", sans-serif;
+html,body,h2,h3,h4,h5,h6 {
+    font-family: 'Exo', sans-serif !important;
+}
+h1 {
+    font-family: 'Exo', sans-serif !important;
+    position: absolute;
+    top: 15%;
+    right: 29.625%;
+    color: #dd9933
 }
 
+div.image {
+   background-image : image;
+}
+
+ha {
+    width: 500px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
 
 
