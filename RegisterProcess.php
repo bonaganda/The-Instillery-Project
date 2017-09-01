@@ -86,17 +86,17 @@ if(isset($_POST['register_btn'])) {
 
                 if(isset($_POST['fifaCheckbox'])) {
                     $insertQuery ="INSERT INTO games
-                        (FIFA) VALUES ('$email')";
+                        (FIFA) VALUES ('$fullname')";
                     $result = mysqli_query($con, $insertQuery);
                 }
                 if(isset($_POST['poolCheckbox'])) {
                     $insertQuery ="INSERT INTO games
-                        (Pool) VALUES ('$email')";
+                        (Pool) VALUES ('$fullname')";
                     $result = mysqli_query($con, $insertQuery);
                 } 
                 if (isset($_POST['nbaCheckbox'])) {
                     $insertQuery ="INSERT INTO games
-                        (NBA) VALUES ('$email')";
+                        (NBA) VALUES ('$fullname')";
                     $result = mysqli_query($con, $insertQuery);
                 }
             }
