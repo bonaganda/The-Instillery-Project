@@ -43,6 +43,20 @@ input[type=checkbox] {
 	height: 16px;
 }
 
+.alert {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 20px 4px 20px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-shadow: none;
+  position: relative;
+  background-color: #272e3b;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px #363d49 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
 
 .alert-error {
   color: #f00;
@@ -56,4 +70,8 @@ input[type=checkbox] {
   background-color: #15360e;
   box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
   margin: 0 710px;
+}
+
+.alert:empty{
+    display: none;
 }

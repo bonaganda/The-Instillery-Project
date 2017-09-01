@@ -3,6 +3,7 @@ session_start();
 $_SESSION['message'] ="";
 $_SESSION['success'] ="";
 require './Database.php';
+$id = rand(10000, 99999);
 
 if(isset($_POST['register_btn'])) {
     //make sure 2 password are equal to each other
@@ -27,19 +28,30 @@ if(isset($_POST['register_btn'])) {
             }
 
             //Create table if it doesn't exist
-            $createTable = "CREATE TABLE IF NOT EXISTS register(
-                            fullname VARCHAR(30) NOT NULL,
-                            password VARCHAR(20) NOT NULL,
-                            email VARCHAR(50) NOT NULL,
-                            image VARCHAR(100)
+            $createTable = "CREATE TABLE IF NOT EXISTS register (
+                            ID INT(5) NOT NULL,
+                            FULLNAME VARCHAR(30) NOT NULL,
+                            PASSWORD VARCHAR(20) NOT NULL,
+                            EMAIL VARCHAR(50) NOT NULL,
+                            IMAGE VARCHAR(100),
+                            PRIMARY KEY (ID)
                             )";
-
+            
             if($tableExists == false) {
                 $queryTable = mysqli_query($con, $createTable);
             } 
+            
+            //check if id is unique
+            $sql = "SELECT * FROM register WHERE ID = '$id'";
+            $result = mysqli_query($con, $sql);
+            while($row = $result -> fetch_assoc()) {
+                    $id = rand(10000, 99999);
+                    $result = mysqli_query($con, $sql);
+            }
+            
             //Checks database for existing users
-            $sql = "SELECT * FROM register WHERE email = '$email'";
-            $result = $con->query($sql);
+            $sql = "SELECT * FROM register WHERE EMAIL = '$email'";
+            $result = mysqli_query($con, $sql);
 
             if($row = $result-> fetch_assoc()) {
                 $_SESSION['message'] = "Email is already in use.";
@@ -49,10 +61,10 @@ if(isset($_POST['register_btn'])) {
                     //copy image to images/ folder
                     if(copy($_FILES['image']['tmp_name'], $image_path)) {
                         $insertQuery ="INSERT INTO register
-                            (fullname, password, email, image) VALUES ('$fullname', '$password', '$email', '$image_path')";
-                        $result = mysqli_query($con, $insertQuery);
-                        if(!$result) {
-                            $_SESSION['message'] = "Failed to create account!";
+                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path')";
+                        $res = mysqli_query($con, $insertQuery);
+                        if(!$res) {
+                            $_SESSION['message'] = "Account creation failed! $id";
                         } else {
                             $_SESSION['success'] = "Registration Successful!";
                         }
@@ -60,7 +72,7 @@ if(isset($_POST['register_btn'])) {
                         $_SESSION['message'] = "Cant copy files";
                     }
                 } else {
-                    $_SESSION['message'] = "Must be an image file!";
+                    $_SESSION['message'] = "Must be an IMAGE file!";
                 }
                 
                 //registers a player under a game if player chose to
@@ -76,21 +88,23 @@ if(isset($_POST['register_btn'])) {
                     $insertQuery ="INSERT INTO games
                         (FIFA) VALUES ('$email')";
                     $result = mysqli_query($con, $insertQuery);
-                } else if(isset($_POST['poolCheckbox'])) {
+                }
+                if(isset($_POST['poolCheckbox'])) {
                     $insertQuery ="INSERT INTO games
                         (Pool) VALUES ('$email')";
                     $result = mysqli_query($con, $insertQuery);
-                } else if(isset($_POST['nbaCheckbox'])) {
+                } 
+                if (isset($_POST['nbaCheckbox'])) {
                     $insertQuery ="INSERT INTO games
                         (NBA) VALUES ('$email')";
                     $result = mysqli_query($con, $insertQuery);
                 }
             }
         } else {
-            $_SESSION['message'] = "Two emails must match!";
+            $_SESSION['message'] = "Email must match!";
         }
     } else {
-        $_SESSION['message'] = "Two passwords must match!";
+        $_SESSION['message'] = "Password must match!";
     }
     
 }
