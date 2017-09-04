@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+require './Database.php';
+?>
 <html>
 <title>User Profile</title>
 <meta charset="UTF-8">
@@ -8,7 +12,8 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<?php include 'Navigationbar.php';?>    
+<?php include 'Navigationbar.php';
+?>    
 <body style="background: url(Images/nbawallpaper.jpg)">
 <br/>
 <div class="w3-content w3-margin-top" style="max-width:450px;">
@@ -47,9 +52,17 @@
         <div class="w3-container">
             <!-- Number 1 in leader board - Score - Needs to retrieve score and other information from the database -->
           <br><br><br><br><br><br><br><p><i class="fa fa-trophy fa-fw w3-margin-right w3-large w3-text-jd"></i>Rank number: Rank 1</p>
-          <p><i class="fa fa-star fa-fw w3-margin-right w3-large w3-text-jd"></i>Total Score: 1796</p>
-          <p><i class="fa fa-link fa-fw w3-margin-right w3-large w3-text-jd"></i>Profile page: Link</p>
-          <p><i class="fa fa-line-chart fa-fw w3-margin-right w3-large w3-text-jd"></i>Rating: A+</p>
+          <?php
+          $sql = "SELECT score, firstName FROM LEADERBOARD WHERE score = (select max(score) from LEADERBOARD)";
+          $result = mysqli_query($con, $sql);
+          
+          $row = mysqli_fetch_assoc($result);
+          echo "
+          <p>Total Score: {$row['score']}</p>
+          <p>Profile page: {$row['firstName']}</p>
+          <p>Rating: A+</p>";
+          
+              ?>
           <br><br><br><br>
           <hr>
         </div>
@@ -74,72 +87,26 @@
         <th>Rating</th>
       </tr>
     </thead>
-    <tr>
-      <td>2</td>
-      <td>Benjo</td>
-      <td>1695</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Jackson</td>
-      <td>1650</td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Johnson</td>
-      <td>1548</td>
-      <td>A-</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Bona</td>
-      <td>1510</td>
-      <td>A-</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Nilson</td>
-      <td>1495</td>
-      <td>B+</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Rhys</td>
-      <td>1465</td>
-      <td>B+</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Terry</td>
-      <td>1452</td>
-      <td>B+</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Jobert</td>
-      <td>1395</td>
-      <td>B</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>Blake</td>
-      <td>1280</td>
-      <td>B-</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>Harry</td>
-      <td>1125</td>
-      <td>C+</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Kate</td>
-      <td>1100</td>
-      <td>C</td>
-    </tr>
+
+    <?php
+    
+    
+        $sql = "SELECT firstName, score FROM LEADERBOARD ORDER BY score DESC";
+        $result = mysqli_query($con, $sql);
+        $rank = 1;
+
+        if (mysqli_num_rows($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>
+            <td>{$rank}</td>
+            <td>{$row['firstName']} </td>
+            <td>{$row['score']}</td>
+            <td> </td>
+                </tr>";
+                $rank++;
+            }
+        }
+    ?>
   </table>
         <div class="w3-container">
           	<div class="w3-black w3-round-xlarge w3-small">
