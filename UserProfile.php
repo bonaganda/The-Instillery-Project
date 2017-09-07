@@ -26,18 +26,19 @@
     
       <div class="w3-black w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="Images/john.jpeg" style="width:100%" alt="Avatar">
+          <img src="Images/john.jpeg" style="width:100%" alt="Avatar" id="imageUser">
           <div class="w3-display-bottomleft w3-container w3-text-white">
-            <h2>John Barraca</h2>
+            <h2 id="fullname">John Barraca</h2>
           </div>
         </div>
         <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-jd"></i>Gamer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-jd"></i>Auckland, New Zealand</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-jd"></i>tvh8833@autuni.ac.nz</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-jd"></i>02392837422</p>
+          <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-jd" id='email'></i >
           <hr>
         </div>
+          <div class="w3-container">
+              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-jd" id='iduser'></i >
+              <hr>
+          </div>
       </div><br>
 
     <!-- End Left Column -->
@@ -47,31 +48,31 @@
     <div class="w3-half">
     
       <div class="w3-container w3-card-2 w3-jd w3-margin-bottom">
-        <h2 class="w3-jd w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-jd"></i>WIN!</h2>
+        <h2 class="w3-jd w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-jd"></i>NBASCORE!</h2>
         <div class="w3-container">
-          	<div class="w3-black w3-round-xlarge w3-small">
-            	<div class="w3-container w3-center w3-round-xlarge w3-white" style="width:55%">55%</div>
+          	<div class="w3-black">
+            	<div id='nbaScore'>0</div>
           	</div>
           <hr class="hra">
         </div>
      </div>
 
       <div class="w3-container w3-card-2 w3-jd w3-margin-bottom">
-        <h2 class="w3-jd w3-padding-16"><i class="fa fa-info-circle fa-fw w3-margin-right w3-xxlarge w3-jd"></i>LOSE</h2>
+        <h2 class="w3-jd w3-padding-16"><i class="fa fa-info-circle fa-fw w3-margin-right w3-xxlarge w3-jd"></i>FIFA_SCORE</h2>
         <div class="w3-container">
-       		<div class="w3-black w3-round-xlarge w3-small">	
-          		<div class="w3-container w3-center w3-round-xlarge w3-white" style="width:55%">55%</div>
-          	</div>
+       		<div class="w3-black">
+              <div id='fifaScore'>0</div>
+            </div>
           <hr class="hra">
         </div>
       </div>
 
       <div class="w3-container w3-card-2 w3-jd  w3-margin-bottom">
-        <h2 class="w3-jd w3-padding-16"><i class="fa fa-handshake-o fa-fw w3-margin-right w3-xxlarge w3-jd "></i>DRAW</h2>
+        <h2 class="w3-jd w3-padding-16"><i class="fa fa-handshake-o fa-fw w3-margin-right w3-xxlarge w3-jd "></i>POOL_SCORE</h2>
         <div class="w3-container">
-       		<div class="w3-black w3-round-xlarge w3-small">	
-          		<div class="w3-container w3-center w3-round-xlarge w3-white" style="width:55%">55%</div>
-          	</div>
+       		<div class="w3-black">
+              <div id='poolScore'>0</div>
+            </div>
           <hr class="hra">
         </div>
       </div>
@@ -90,6 +91,11 @@
   <a href="https://www.instagram.com/jdfruitjam/"><i class="fa fa-instagram w3-xlarge w3-hover-opacity"></i></a>
   <a href="https://www.linkedin.com/in/john-barraca-13b948142/"><i class="fa fa-linkedin w3-xlarge w3-hover-opacity"></i></a>
 </footer>
+
+    <!--Own Script-->
+<script src="js/jquery.js"></script>
+<script src="js/profile.js  "></script>
+
 
 </body>
 </html>

@@ -3,13 +3,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 25/08/2017, 11:59:33 AM
     Author     : Benjo
 */
 
-#logo { 
-    float:left; top:0; left:0; 
+#logo {
+    float:left; top:0; left:0;
 }
 
 #nav
@@ -33,7 +33,7 @@ and open the template in the editor.
     float: right;
     margin-right: 50px;
     text-align: center;
-    
+
 }
 
 #nav li
@@ -43,7 +43,7 @@ and open the template in the editor.
     font-weight: bold;
     float: left;
     position: relative;
-    
+
 }
 
 nav li a {
@@ -77,60 +77,34 @@ nav li a {
     background-color: #b57c28;
 }
 
-.dropbtn {
-    display: inline-block;
-    background-color: transparent;
-    padding: 14px 16px;
-    border: none;
-    color: white;
-    text-align: center;
-    float: bottom;
-    position: relative;
-    font-size: 20px;
-}
+/* Sticky footer styles
+-------------------------------------------------- */
 
-.dropdown {
-    display: inline-block;   
-}
+/*html,*/
+/*body {*/
+    /*height: 100%;*/
+    /*!* The html and body elements cannot have any padding or margin. *!*/
+    /*padding-top: 70px; !* Required padding for .navbar-fixed-top. Change if height of navigation changes. *!*/
+/*}*/
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: black;
-    min-width: 122px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   
-}
+/*.navbar-fixed-top .nav {*/
+    /*padding: 15px 0;*/
+/*}*/
 
-.dropdown-content-sub{
-    display: none;
-    position: absolute;
-    right: 100%;
-    top: 0;
-    visibility: hidden;
-    background-color: black;
-    min-width: 122px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-}
+/*.navbar-fixed-top .navbar-brand {*/
+    /*padding: 0 15px;*/
+/*}*/
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+/*@media(min-width:768px) {*/
+    /*body {*/
+        /*padding-top: 100px; !* Required padding for .navbar-fixed-top. Change if height of navigation changes. *!*/
+    /*}*/
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #fff; opacity: 0.7}
+    /*.navbar-fixed-top .navbar-brand {*/
+        /*padding: 15px 0;*/
+    /*}*/
+/*}*/
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content:hover .dropdown-content-sub{
-    visibility: visible;
-    display: block;
-}
-
+/*.login {*/
+    /*margin-bottom:5px;*/
+/*}*/

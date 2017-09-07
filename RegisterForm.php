@@ -6,17 +6,17 @@
         <meta charset="UTF-8">
         <title>Sign Up</title>
         <link rel="stylesheet" type="text/css" href="CSS/registerStyle.css"/>
-        <script type="text/javascript" src="RegisterJScript.js"></script>
+<!--        <script type="text/javascript" src="RegisterJScript.js"></script>-->
     </head>
     <body>
         <header> 
-            <a href='index.php'><img src ="Images/InstilleryLogo.png" alt="logo" style="height: 19%; width: 24%; "/></a>
+            <a href='index.html'><img src ="Images/InstilleryLogo.png" alt="logo" style="height: 19%; width: 24%; "/></a>
         </header>
         
         <img src ="Images/SignUpIcon.png" alt="sUIcon" style="height: 20px; position: relative; ">
         <i style="font-size: 22px"> Already have an account?</i><br><br>
         <input type="submit" name ="login" value="Login" class="loginbutton" id="btnLgn" 
-        style="font-size: 18px; background-color: lightgreen; font-weight: bold; " onClick="document.location.href='Login.html'" >
+        style="font-size: 18px; background-color: lightgreen; font-weight: bold; " onClick="document.location.href='index.html'" >
         <div>
             <form enctype="multipart/form-data" method="POST" action="RegisterForm.php">
                 <p style="font-size: 22px">

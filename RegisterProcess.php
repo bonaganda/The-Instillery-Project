@@ -60,9 +60,16 @@ if(isset($_POST['register_btn'])) {
                 if(preg_match("!image!", $_FILES['image']['type'])) {
                     //copy image to images/ folder
                     if(copy($_FILES['image']['tmp_name'], $image_path)) {
+
+                        //test
+//                        $insertQuery ="INSERT INTO register
+//                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path')";
+//                        $res = mysqli_query($con, $insertQuery);
+
                         $insertQuery ="INSERT INTO register
-                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path')";
-                        $res = mysqli_query($con, $insertQuery);
+                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path'); INSERT INTO gameData(ID) VALUES('$id');";
+                            $res = mysqli_multi_query($con, $insertQuery);
+
                         if(!$res) {
                             $_SESSION['message'] = "Account creation failed! $id";
                         } else {
