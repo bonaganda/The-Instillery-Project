@@ -39,19 +39,19 @@ require './Database.php';
           <div class="w3-text-grey w3-card-4">
         <div class="w3-display-container">
             <center>
-            <img src="Images/john.jpeg" class= "w3-circle" style=" position: absolute; bottom:-20%; left:35.5%; width:30%" alt="Avatar"><br><br><br><br>
+                <img src="Images/wil.jpg" class= "w3-circle" style=" position: absolute; bottom:-20%; left:35.5%; width:30%" alt="Avatar"><br><br><br><br>
             </center>
             
           <div class="w3-display-bottommiddle w3-container w3-text-gold" style="position: absolute; top:120%; left:50%;">
             
               <!-- For name, needs to get from the database below -->
               
-              <h2>John</h2>           
+              <h2>Rank 1</h2>           
           </div>
         </div>
         <div class="w3-container">
             <!-- Number 1 in leader board - Score - Needs to retrieve score and other information from the database -->
-          <br><br><br><br><br><br><br><p><i class="fa fa-trophy fa-fw w3-margin-right w3-large w3-text-jd"></i>Rank number: Rank 1</p>
+          <br><br><br><br><br><br><br>
           <?php
           $sql = "SELECT score, name FROM DUMMYTABLE WHERE score = (select max(score) from DUMMYTABLE)";
           $result = mysqli_query($con, $sql);
@@ -60,7 +60,7 @@ require './Database.php';
           echo "
           <p>Total Score: {$row['score']}</p>
           <p>Profile page: {$row['name']}</p>
-          <p>Rating: A+</p>";
+          <p>Rating: Platinum</p>";
           
               ?>
           <br><br><br><br>
@@ -91,17 +91,20 @@ require './Database.php';
     <?php
     
     
-        $sql = "SELECT name, score FROM DUMMYTABLE ORDER BY score DESC";
+        $sql = "SELECT DUMMYTABLE.name,  DUMMYTABLE.score, DUMMYTABLE2.points
+        FROM DUMMYTABLE
+        LEFT JOIN DUMMYTABLE2 ON DUMMYTABLE.name = DUMMYTABLE2.name ORDER BY score DESC";
         $result = mysqli_query($con, $sql);
         $rank = 1;
-
         if (mysqli_num_rows($result)) {
             while ($row = mysqli_fetch_assoc($result)) {
+                if($row['points'] >= 100 && $row['points'] < 300) { $rating = 'Bronze'; } else if($row['points'] >= 300 && $row['points'] < 500) { $rating = 'Silver'; } else if($row['points'] >= 500 && $row['points'] < 700) { $rating = 'Gold'; } else if($row['points'] >= 700 && $row['points'] < 1001) { $rating = 'Platinum'; }
                 echo "<tr>
             <td>{$rank}</td>
             <td>{$row['name']} </td>
             <td>{$row['score']}</td>
-            <td> </td>
+            <td>{$rating}</td>
+            
                 </tr>";
                 $rank++;
             }
