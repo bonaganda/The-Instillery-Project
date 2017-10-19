@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/05/2017, 12:05:02 PM
+    Author     : Bonaliza
+*/
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+
+body {
+	background-image: url("../Images/registerBackground.jpg");
+	background-size: 100% 100%;
+	font-family: 'Exo', sans-serif;
+	text-align: center;
+        color: black;
+}
+
+input {
+	background: transparent;
+	font-family: 'Exo', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-size: 16px;
+	width: 25%;
+	height: 45px;
+}
+
+input[name="login"]:hover{
+	color: gold;
+}
+
+input[name="register_btn"]:hover{
+	color: gold;
+}
+
+input[type=checkbox] {
+	width: 5%;
+	margin-left: -1%;
+	height: 16px;
+}
+
+.alert {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 20px 4px 20px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-shadow: none;
+  position: relative;
+  background-color: #272e3b;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px #363d49 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.alert-error {
+  color: #f00;
+  background-color: #360e10;
+  box-shadow: 0 0 0 1px #551e21 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+  margin: 0 710px;
+}
+
+.alert-succ {
+  color: #21ec0c;
+  background-color: #15360e;
+  box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+  margin: 0 710px;
+}
+
+.alert:empty{
+    display: none;
+}
