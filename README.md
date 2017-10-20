@@ -92,4 +92,4 @@
 * The "Invitation" under Tournament tab can send message to all register email for any useful announcement.
 
 ## Copyright and License:
-* Copyright 2017 Team Beats. Code released under the [MIT] (https://github.com/bonaganda/The-Instillery-Project/blob/master/LICENSE) license. 
+* Copyright 2017 Team Beats. Code released under the [MIT](https://github.com/bonaganda/The-Instillery-Project/blob/master/LICENSE) license. 
