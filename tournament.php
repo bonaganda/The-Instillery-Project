@@ -12,26 +12,16 @@
      	<?php include 'navigationbar.php'; ?>
      	<div class="container">
      		<!-- Page Features -->
-      		<div id="BracketsNinja_05e1d5dee6c459fe7153f1c3eab1e443" style="background-color: transparent "></div>
+      		<div id="BracketsNinja_312f423cd0edeaad1ff990ac1e1a5bfe" style="background-color: transparent "></div>
      	</div>
 
 	
 	<script type="text/javascript">
-	(function() {
-	var bn = document.createElement('script'); bn.type = 'text/javascript';
-		bn.src = ('https:' == document.location.protocol ? 'https://' : 'http://') 
-		+ 'www.bracketsninja.com/api/bracket/05e1d5dee6c459fe7153f1c3eab1e443?bnurl=' + window.location.href;
-	var s = document.getElementsByTagName('head')[0].appendChild(bn);
-	$("a").remove("#bracketsninja_credits_side");
-	})();
-	</script>
-	
-	<script src="js/jquery.js"></script>
-	
-	<script type="text/javascript">
-		$(document).ready(function(){
-		    $("#bracketsninja_credits_side").remove('.ng-scopre');
-		});
+		(function() {
+		var bn = document.createElement('script'); bn.type = 'text/javascript';
+		bn.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.bracketsninja.com/api/bracket/312f423cd0edeaad1ff990ac1e1a5bfe?bnurl=' + window.location.href;
+		var s = document.getElementsByTagName('head')[0].appendChild(bn);
+		})();
 	</script>
 	
 	</body>

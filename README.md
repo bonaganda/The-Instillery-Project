@@ -91,5 +91,5 @@
 * The "start game" icon below the diffent game images allows you go to start a new game for the differnt games.
 * The "Invitation" under Tournament tab can send message to all register email for any useful announcement.
 
-## Licensing Informataion:
-* Copyright 2017 Team Beats. 
+## Copyright and License:
+* Copyright 2017 Team Beats. Code released under the [MIT] (https://github.com/bonaganda/The-Instillery-Project/blob/master/LICENSE) license. 
