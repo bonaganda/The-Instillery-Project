@@ -1,0 +1,44 @@
+/*Validator Message*/
+      label.error 
+      {
+            position: absolute;
+            height:33px;
+            border-top:1px solid #99182c;
+            border-right:1px solid #99182c;
+            border-bottom:1px solid #99182c;
+            border-left:1px solid #99182c;
+            margin-left:10px;
+            padding:5px 5px 0px 5px;
+            font-size:12px;
+            color:red;
+      }
+/*Customer Table Styling*/
+      #customers   
+      {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+      }
+
+      #customers td, #customers th 
+      {
+            border: 1px solid #ddd;
+            padding: 8px;
+      }
+
+
+      #customers tr:hover 
+      {
+            background-color: #dd9933;
+      }
+
+      #customers th 
+      {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #dd9933;
+            color: white;
+      }
+/*Success and Error Message*/
+      

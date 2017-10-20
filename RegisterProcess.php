@@ -61,13 +61,9 @@ if(isset($_POST['register_btn'])) {
                     //copy image to images/ folder
                     if(copy($_FILES['image']['tmp_name'], $image_path)) {
 
-                        //test
-//                        $insertQuery ="INSERT INTO register
-//                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path')";
-//                        $res = mysqli_query($con, $insertQuery);
-
+                        //add details
                         $insertQuery ="INSERT INTO register
-                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path'); INSERT INTO gameData(ID) VALUES('$id');";
+                            (ID, FULLNAME, PASSWORD, EMAIL, IMAGE) VALUES ('$id', '$fullname', '$password', '$email', '$image_path'); INSERT INTO gameData(ID, RANKPOINTS) VALUES('$id',100)";
                             $res = mysqli_multi_query($con, $insertQuery);
 
                         if(!$res) {
@@ -80,31 +76,6 @@ if(isset($_POST['register_btn'])) {
                     }
                 } else {
                     $_SESSION['message'] = "Must be an IMAGE file!";
-                }
-                
-                //registers a player under a game if player chose to
-                //Check registered games
-                $createGamesTableQuery = "CREATE TABLE IF NOT EXISTS games(
-                                FIFA VARCHAR(30),
-                                NBA VARCHAR(30),
-                                Pool VARCHAR(30)
-                                )";
-                $createGamesTable = mysqli_query($con, $createGamesTableQuery);
-
-                if(isset($_POST['fifaCheckbox'])) {
-                    $insertQuery ="INSERT INTO games
-                        (FIFA) VALUES ('$fullname')";
-                    $result = mysqli_query($con, $insertQuery);
-                }
-                if(isset($_POST['poolCheckbox'])) {
-                    $insertQuery ="INSERT INTO games
-                        (Pool) VALUES ('$fullname')";
-                    $result = mysqli_query($con, $insertQuery);
-                } 
-                if (isset($_POST['nbaCheckbox'])) {
-                    $insertQuery ="INSERT INTO games
-                        (NBA) VALUES ('$fullname')";
-                    $result = mysqli_query($con, $insertQuery);
                 }
             }
         } else {

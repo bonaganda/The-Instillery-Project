@@ -1,0 +1,59 @@
+/*!
+ * Start Bootstrap - Heroic Features (http://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+
+/*Sign-In Width*/
+/*ul.dropdown-lr {*/
+    /*width: 100px;*/
+/*}*/
+
+
+
+.card {
+    height: 100%;
+}
+
+
+
+
+
+
+span{
+    animation: blink 1s infinite;
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; }
+}
+
+@keyframes blink{
+    to{opacity: .0;}
+}
+
+::selection{
+    background: black;
+}
+/*End Of Text Animation*/
+.image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}

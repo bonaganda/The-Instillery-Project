@@ -5,18 +5,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Sign Up</title>
-        <link rel="stylesheet" type="text/css" href="CSS/registerStyle.css"/>
-<!--        <script type="text/javascript" src="RegisterJScript.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/registerStyle.css"/>
+        <link rel="shortcut icon" href="https://theinstillery.com/wp-content/uploads/2016/08/favicon.ico" />
     </head>
     <body>
         <header> 
-            <a href='index.html'><img src ="Images/InstilleryLogo.png" alt="logo" style="height: 19%; width: 24%; "/></a>
+            <a href='index.php'><img src ="Images/InstilleryLogo.png" alt="logo" style="height: 19%; width: 24%; "/></a>
         </header>
         
         <img src ="Images/SignUpIcon.png" alt="sUIcon" style="height: 20px; position: relative; ">
         <i style="font-size: 22px"> Already have an account?</i><br><br>
         <input type="submit" name ="login" value="Login" class="loginbutton" id="btnLgn" 
-        style="font-size: 18px; background-color: lightgreen; font-weight: bold; " onClick="document.location.href='index.html'" >
+        style="font-size: 18px; background-color: lightgreen; font-weight: bold; " onClick="document.location.href='index.php'" >
         <div>
             <form enctype="multipart/form-data" method="POST" action="RegisterForm.php">
                 <p style="font-size: 22px">
@@ -35,10 +35,7 @@
                 <input type="email" name="confirmEmail" placeholder="Confirm Email" required><br><br>
 
 
-                <a style="position:relative; right: 8%">Enter League(Optional):</a><br><br>
-                <input type="checkbox" name="fifaCheckbox" >FIFA
-                <input type="checkbox" name="poolCheckbox">Pool
-                <input type="checkbox" name="nbaCheckbox">NBA2k17<br><br>
+                <br><br>
 
                 <input type="submit" name="register_btn" value="Register" style="font-size: 18px; background-color: lightgreen; font-weight: bold;">
             </form> 

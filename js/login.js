@@ -5,15 +5,18 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "php/login.php",
+            url: "login.php",
             data: "name="+username+"&pwd="+password,
             success: function(value){
-                alert(value);
-                if (value === 'OK') {
-                    window.location="userProfile.php";
+                if (value != 'NO') {
+                    // alert(value);
+                    // window.location="UserProfile.php";
+                    $('#textlog').hide();
+                    $("#show").show();
+                    $('#show').html(value);
                 }
-                else if(value=='OK NOT'){
-                    window.location="userProfile.php";
+                else if(value=='NO'){
+                    $("#incorrect").modal('show');
                 }
             }
         });
