@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="https://theinstillery.com/wp-content/uploads/2016/08/favicon.ico" />
     </head>
     <!--MY OWN BODY CSS -->
-    <body style=" background-image: url(Images/websitebackground.jpg);  font-family: 'Exo', sans-serif;text-align: center; margin-top: 35px; color: white; font-size: 20px">
+    <body style=" background-image: url(Images/websitebackground.jpg);  font-family: 'Exo'; text-align: center; margin-top: 35px; color: white; font-size: 22px">
 
      	<?php include 'navigationbar.php'; ?>
      	<div class="container">
@@ -15,7 +15,7 @@
       		<div id="BracketsNinja_312f423cd0edeaad1ff990ac1e1a5bfe" style="background-color: transparent "></div>
      	</div>
 
-	
+
 	<script type="text/javascript">
 		(function() {
 		var bn = document.createElement('script'); bn.type = 'text/javascript';
@@ -23,7 +23,7 @@
 		var s = document.getElementsByTagName('head')[0].appendChild(bn);
 		})();
 	</script>
-	
+
 	</body>
-	
+
 </html>

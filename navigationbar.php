@@ -35,7 +35,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="nbaleaderboard.php">NBA</a>
                             <a class="dropdown-item" href="fifaleaderboard.php">FIFA</a>
-                            <a class="dropdown-item" href="#">POOL</a>
+                            <a class="dropdown-item" href="poolleaderboard.php">POOL</a>
                         </div>
                     </li>
 

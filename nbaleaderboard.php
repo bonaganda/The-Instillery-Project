@@ -69,14 +69,26 @@ require './Database.php';
                                 <!-- Number 1 in leader board - Score - Needs to retrieve score and other information from the database -->
                               <br><br><br><br>
                               <?php
-                              $sql = "SELECT register.FULLNAME, gameData.NBA_SCORE FROM register inner join gameData on register.ID = gameData.ID WHERE NBA_SCORE = (select max(NBA_SCORE) from gameData)";
-                              $result = mysqli_query($con, $sql);
+                              $sql = "SELECT register.FULLNAME, gameData.NBA_SCORE, gameData.RANKPOINTS FROM register inner join gameData on register.ID = gameData.ID WHERE NBA_SCORE = (select max(NBA_SCORE) from gameData)";
+                                $result = mysqli_query($con, $sql);
                                 $row = mysqli_fetch_assoc($result);
+                                if($row['RANKPOINTS'] < 300) 
+                                { 
+                                  $rating = 'Bronze'; 
+                                } else if($row['RANKPOINTS'] >= 300 && $row['RANKPOINTS'] < 500) 
+                                { 
+                                  $rating = 'Silver'; 
+                                } else if($row['RANKPOINTS'] >= 500 && $row['RANKPOINTS'] < 700) 
+                                { 
+                                  $rating = 'Gold'; 
+                                } else if($row['RANKPOINTS'] >= 700 && $row['RANKPOINTS'] < 1001) 
+                                { 
+                                  $rating = 'Platinum'; 
+                                }
                                   echo "
                                   <p>Name: {$row['FULLNAME']}</p>
                                   <p>Total Score: {$row['NBA_SCORE']}</p>
-
-                                  <p>Rating: Bronze</p>";      
+                                  <p>Rating: {$rating}</p>";      
                                  ?>
                                   <br><br><br><br>
                                   <hr>
@@ -109,7 +121,7 @@ require './Database.php';
                     $rank = 1;
                     if (mysqli_num_rows($result)) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            if($row['RANKPOINTS'] >= 100 && $row['RANKPOINTS'] < 300) 
+                            if($row['RANKPOINTS'] < 300) 
                               { 
                                 $rating = 'Bronze'; 
                               } else if($row['RANKPOINTS'] >= 300 && $row['RANKPOINTS'] < 500) 

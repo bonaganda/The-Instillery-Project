@@ -38,8 +38,7 @@ require './Database.php';
         </style>
     </head>
     <!--MY OWN BODY CSS -->
-    <body style=" background-image: url(Images/websitebackground.jpg);  font-family: 'Exo';text-align: center; color: white; 
-                font-size: 22px">
+    <body style=" background-image: url(Images/websitebackground.jpg); font-family: 'Exo','sans-serif'; text-align: center; color: white; font-size: 22px">
         <?php include 'navigationbar.php'; ?>
         <br><br><br>
         <div class="w3-content w3-margin-top" style="max-width:450px;"></div>
@@ -70,7 +69,7 @@ require './Database.php';
                                 <!-- Number 1 in leader board - Score - Needs to retrieve score and other information from the database -->
                               <br><br><br><br>
                               <?php
-                              $sql = "SELECT register.FULLNAME, gameData.FIFA_SCORE, gameData.RANKPOINTS FROM register inner join gameData on register.ID = gameData.ID WHERE FIFA_SCORE = (select max(FIFA_SCORE) from gameData)";
+                              $sql = "SELECT register.FULLNAME, gameData.POOL_SCORE, gameData.RANKPOINTS FROM register inner join gameData on register.ID = gameData.ID WHERE POOL_SCORE = (select max(POOL_SCORE) from gameData)";
                               $result = mysqli_query($con, $sql);
                                 $row = mysqli_fetch_assoc($result);
                                 if($row['RANKPOINTS'] < 300) 
@@ -88,8 +87,7 @@ require './Database.php';
                                 }
                                   echo "
                                   <p>Name: {$row['FULLNAME']}</p>
-                                  <p>Total Score: {$row['FIFA_SCORE']}</p>
-
+                                  <p>Total Score: {$row['POOL_SCORE']}</p>
                                   <p>Rating: {$rating}</p>";      
                                  ?>
                                   <br><br><br><br>
@@ -117,8 +115,8 @@ require './Database.php';
                       </tr>
                     </thead>
                     <?php
-                    $sql = "SELECT register.FULLNAME,  gameData.FIFA_SCORE, gameData.RANKPOINTS
-                    FROM register inner join gameData on register.ID = gameData.ID ORDER BY gameData.FIFA_SCORE DESC";
+                    $sql = "SELECT register.FULLNAME,  gameData.POOL_SCORE, gameData.RANKPOINTS
+                    FROM register inner join gameData on register.ID = gameData.ID ORDER BY gameData.POOL_SCORE DESC";
                     $result = mysqli_query($con, $sql);
                     $rank = 1;
                     if (mysqli_num_rows($result)) {
