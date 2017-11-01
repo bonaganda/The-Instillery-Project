@@ -23,7 +23,7 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: #dd9933">
-                        <h4 class="modal-title" style="color: black">Gaming Issue</h4>
+                        <h4 class="modal-title" style="color: black">Result</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 

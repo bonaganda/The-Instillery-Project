@@ -5,7 +5,7 @@ require './Database.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>User Profile</title>
+        <title>Fifa Leaderboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -58,7 +58,7 @@ require './Database.php';
                         <div class="w3-text-white w3-card-4">
                             <div class="w3-display-container">
                                 <center>
-                                <img src="getImage.php" class= "w3-circle" style=" position: absolute; bottom:-20%; left:35.5%; width:30%" alt="Avatar"><br><br><br><br>
+                                <img src="getImageFifa.php" class= "w3-circle" style=" position: absolute; bottom:-20%; left:35.5%; width:30%" alt=""><br><br><br><br>
                                 </center>
                                  <div class="w3-display-bottommiddle w3-container w3-text-gold" style="position: absolute; top:120%; left:50%;">
                                      <!-- For name, needs to get from the database below -->
@@ -86,12 +86,13 @@ require './Database.php';
                                 { 
                                   $rating = 'Platinum'; 
                                 }
+                                  if($row['FIFA_SCORE'] >0) {
                                   echo "
                                   <p>Name: {$row['FULLNAME']}</p>
                                   <p>Total Score: {$row['FIFA_SCORE']}</p>
-
-                                  <p>Rating: {$rating}</p>";      
-                                 ?>
+                                  <p>Rating: {$rating}</p>";  
+                                }
+                                ?>
                                   <br><br><br><br>
                                   <hr>
                             </div>
@@ -112,7 +113,7 @@ require './Database.php';
                       <tr class=" w3-orange">
                         <th>Rank</th>
                         <th>Name</th>
-                        <th>Points</th>
+                        <th>Score</th>
                         <th>Rating</th>
                       </tr>
                     </thead>
@@ -136,13 +137,16 @@ require './Database.php';
                               { 
                                 $rating = 'Platinum'; 
                               }
-                            echo "<tr>
-                    <td>{$rank}</td>
-                    <td>{$row['FULLNAME']} </td>
-                    <td>{$row['RANKPOINTS']}</td>
-                    <td>{$rating}</td>
-                    
-                        </tr>";
+                            if($row['FIFA_SCORE'] > 0)
+                              {
+                              echo "<tr>
+                  <td>{$rank}</td>
+                  <td>{$row['FULLNAME']} </td>
+                  <td>{$row['FIFA_SCORE']}</td>
+                  <td>{$rating}</td>
+                  
+                      </tr>";
+                              }
                             $rank++;
                         }
                     }

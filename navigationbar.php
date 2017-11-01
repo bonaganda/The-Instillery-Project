@@ -2,6 +2,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Another core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Exo' >
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #040404; font-family: 'Exo'">
         <!--Container Start-->

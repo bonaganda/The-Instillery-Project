@@ -14,7 +14,7 @@
     $p2s=$_POST['p2score'];
     //Rank Points
     $rankWin = 15;
-    $rankLoss = 10;
+    $rankLoss = -10;
 
     //WIN & LOSS
     $win = 1;
