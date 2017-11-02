@@ -1,22 +1,24 @@
 # The-Instillery-Project
-## [Game Tracker](http://instillerygametracker-env.ytj9pwuqtq.us-east-2.elasticbeanstalk.com/index.php). 
+## [Game Tracker](http://instillerygametracker-env.ytj9pwuqtq.us-east-2.elasticbeanstalk.com/index.php).
 ## Preview [![Preview](https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-501194320510/images/preview.png)](http://instillerygametracker-env.ytj9pwuqtq.us-east-2.elasticbeanstalk.com/index.php).
 
 ## Project source can be downloaded: [officegametracker](https://github.com/bonaganda/The-Instillery-Project).
 
 ## Author & Contributor List
 
-### John Barr 
+### John Barr
 
 ### Bonaliza Garcia
 
 ### Benjo Baroro
 
+### Rhys Ah Colt
+
 ### All other known bugs and fixes can be sent to rrb8430@aut.ac.nz
 
-# File List 
+# File List
 
-## css 
+## css
 * addGame.css
 * bootstrap.css
 * homep.css
@@ -76,7 +78,7 @@
 ## Code Enhancement or Testing
 
 ### Basic
-* Depending on your programs: after clonning the file. 
+* Depending on your programs: after clonning the file.
 * You will need to extract the file to a specified location of your web service such as XAAMP, WAAMP & IIS:
 * Then once the files are extracted open the files with your desired IDE to manipulate the program.
 
@@ -92,4 +94,4 @@
 * The "Invitation" under Tournament tab can send message to all register email for any useful announcement.
 
 ## Copyright and License:
-* Copyright 2017 Team Beats. Code released under the [MIT](https://github.com/bonaganda/The-Instillery-Project/blob/master/LICENSE) license. 
+* Copyright 2017 Team Beats. Code released under the [MIT](https://github.com/bonaganda/The-Instillery-Project/blob/master/LICENSE) license.

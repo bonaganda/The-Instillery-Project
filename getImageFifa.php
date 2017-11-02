@@ -2,7 +2,7 @@
   session_start();
   require './Database.php';
 
-  header("Content-Type: image/jpeg");    
+  header("Content-Type: image/jpeg");
 
   // do some validation here to ensure id is safe
 
@@ -14,10 +14,7 @@
   $result = mysqli_query($con, $sql);
   $row = mysqli_fetch_assoc($result);
   $path = $row['IMAGE'];//Maybe you need to change this if you only save an url in the database
-if($row['FIFA_SCORE'] > 0){
-	echo file_get_contents($path);
-}
-
-    
-
+  if($row['FIFA_SCORE'] > 0){
+  	echo file_get_contents($path);
+  }
 ?>
