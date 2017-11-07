@@ -10,14 +10,14 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
     <!--MY OWN BODY CSS -->
-    <body style="background-image: url(Images/websitebackground.jpg);  font-family: 'Exo'; text-align: center; 
+    <body style="background-image: url(Images/websitebackground.jpg);  font-family: 'Exo'; text-align: center;
                 margin-top: 35px; color: white; font-size: 22px">
 
         <?php include 'navigationbar.php'; ?>
         <br>
         <!--Add Fifa Game Logo-->
         <h1 class=""><small>FIFA</small></h1>
-        
+
        <!--Result-->
         <!--Error Or Success-->
         <div id="game" class="modal fade" role="dialog">
@@ -50,7 +50,7 @@
             <br>
             <input class="btn w3-border" type="number" id ="player2" name="player2" placeholder="Player ID" required><br><br>
             <input class="btn w3-border" type="number" id="p2score" name="p2score" placeholder="Player Score" required><br><br>
-            
+
             <br>
             <input class="btn w3-button w3-black" type="submit" name ="addFifaBtn" id="addFifaBtn" value="Submit Result" style="font-size: 16px;">
         </form>
@@ -60,7 +60,7 @@
         <!--Modal Container-->
         <div class="w3-container">
             <!--Modal Page Button-->
-            <button onclick="document.getElementById('id01').style.display='block'" class="btn w3-button w3-black">OPEN ID</button>
+            <button onclick="document.getElementById('id01').style.display='block'" class="btn w3-button w3-black" style="display: none" id="modalContain">OPEN ID</button>
             <!--Modal Page Content-->
             <div id="id01" class="w3-modal">
                 <!--Modal Content-->

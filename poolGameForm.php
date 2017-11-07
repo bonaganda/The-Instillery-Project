@@ -48,7 +48,7 @@
             <br>
             <input class="btn w3-border" type="number" id ="player2" name="player2" placeholder="Player ID" required><br><br>
             <input class="btn w3-border"type="number" id="p2score" name="p2score" placeholder="Player Score" required><br><br>
-            
+
             <br>
             <input class="btn w3-button w3-black" type="submit" name ="addpool" id="addpool" value="Submit Result" style="font-size: 16px;">
         </form>
@@ -57,7 +57,7 @@
         <!--Modal Container-->
         <div class="w3-container">
             <!--Modal Page Button-->
-            <button onclick="document.getElementById('id01').style.display='block'" class="btn w3-button w3-black">OPEN ID</button>
+            <button onclick="document.getElementById('id01').style.display='block'" class="btn w3-button w3-black" style="display: none" id="modalContain">OPEN ID</button>
             <!--Modal Page Content-->
             <div id="id01" class="w3-modal">
                 <!--Modal Content-->
@@ -101,5 +101,4 @@
         <script src="js/addpool.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </body>
-</html> 
-
+</html>

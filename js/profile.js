@@ -28,7 +28,7 @@ $(document).ready(function(){
                 $('#fifaScore').html(fifa);
                 $('#poolScore').html(pool);
                 $('#iduser').html(id);
-
+                $('#modalContain').hide();
             }
         });
 });

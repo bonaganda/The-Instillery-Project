@@ -9,11 +9,11 @@ $(document).ready(function(){
             data: "name="+username+"&pwd="+password,
             success: function(value){
                 if (value != 'NO') {
-                    // alert(value);
-                    // window.location="UserProfile.php";
+
                     $('#textlog').hide();
                     $("#show").show();
                     $('#show').html(value);
+                    $('#modalContain').show();
                 }
                 else if(value=='NO'){
                     $("#incorrect").modal('show');

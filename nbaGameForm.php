@@ -37,31 +37,31 @@
                 </div>
             </div>
         </div>
-        
+
         <!--Add NBA Game Form-->
         <form method="POST" id="nbaform">
             Player 1
             <br>
             <input class=" btn w3-border" type="number" id="player1" name="player1" placeholder="Player ID"  required>
-            <br><br>  
+            <br><br>
             <input class=" btn w3-border" type="number" id="p1score" name="p1score" placeholder="Player Score" required>
-            <br><br>   
+            <br><br>
 
             Player 2
             <br>
             <input class=" btn w3-border" type="number" id ="player2" name="player2" placeholder="Player ID" required>
             <br><br>
             <input class=" btn w3-border" type="number" id="p2score" name="p2score" placeholder="Player Score" required>
-            <br><br>    
+            <br><br>
 
             <input class="btn w3-button w3-black" type="submit" name ="addnba" id="addnba" value="Submit Result" style="font-size: 16px;">
         </form>
         <!--Add NBA Game Form End-->
         <br><br>
         <!--Modal Container-->
-        <div class="w3-container">
+        <div class="w3-container" >
             <!--Modal Page Button-->
-            <button onclick="document.getElementById('id01').style.display='block'" class="btn w3-button w3-black">OPEN ID</button>
+            <button onclick="document.getElementById('id01').style.display='block'" class="btn w3-button w3-black" style="display: none" id="modalContain">OPEN ID</button>
             <!--Modal Page-->
             <div id="id01" class="w3-modal">
                 <!--Modal Content-->
@@ -102,6 +102,7 @@
         <!--Modal Container End-->
 
         <!--Own Style JavaScript -->
+        <!-- <script src="js/use.js"></script> -->
         <script src="js/addnba.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </body>
